@@ -19,7 +19,7 @@
     </head>
 
 
-    <body id="">
+    <body id="debug">
         <header>
             <nav
                 class="navbar navbar-expand-lg navbar-dark bg-dark"
@@ -98,12 +98,12 @@
             
         </header>
 
-        <main>
+        <main class="">
 
-            <div class="container table-responsive">
+            <div class="container-fluid container-lg table-responsive px-md-5">
                 <table class="table table-striped ">
                     
-                    <thead class="thead-dark">
+                    <thead class="thead-dark align-middle">
                         <tr>
                         <th>Titolo</th>
                         <th class="d-none d-md-table-cell">Data Prestito</th>
@@ -111,15 +111,15 @@
                         <th>Azioni</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody>  <!-- //icons rows "Non disponibile" impossible allign y center in 768-803px range -->
 
                         <tr class="align-middle">
                             <td>I pilastri della terra</td>
                             <td class="d-none d-md-table-cell">-</td>
-                            <td class=""><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
-                            <td>
-                                <i class="fa-solid fa-pencil fs-4 text-secondary p-1 border border-secondary rounded"></i>
-                                <i class="fa-solid fa-trash fs-4 text-secondary p-1 border border-secondary rounded"></i>
+                            <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
+                            <td class="d-flex align-items-center">
+                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>  <!-- //the line breaks 800px+ if not fs-6 -->
+                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
                             </td>
                         </tr>
                     
@@ -127,9 +127,9 @@
                             <td>I promessi sposi</td>
                             <td class="d-none d-md-table-cell">-</td>
                             <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
-                            <td>
-                            <i class="fa-solid fa-pencil fs-4 text-secondary p-1 border border-secondary rounded"></i>
-                            <i class="fa-solid fa-trash fs-4 text-secondary p-1 border border-secondary rounded"></i>
+                            <td class="d-flex align-items-center">
+                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
+                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
                             </td>
                         </tr>
 
@@ -137,9 +137,9 @@
                             <td>Il signore degli anelli</td>
                             <td class="d-none d-md-table-cell">18/10/2023</td>
                             <td><span class="bg-warning text-white p-1 rounded">In prestito</span></td>
-                            <td>
-                                <i class="fa-solid fa-pencil fs-4 text-secondary p-1 border border-secondary rounded"></i>
-                                <i class="fa-solid fa-trash fs-4 text-secondary p-1 border border-secondary rounded"></i>
+                            <td class="d-flex align-items-center">
+                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
+                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
                             </td>
                         </tr>
 
@@ -147,9 +147,9 @@
                             <td>Harry Potter e la pietra filosofale</td>
                             <td class="d-none d-md-table-cell">-</td>
                             <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
-                            <td>
-                                <i class="fa-solid fa-pencil fs-4 text-secondary p-1 border border-secondary rounded"></i>
-                                <i class="fa-solid fa-trash fs-4 text-secondary p-1 border border-secondary rounded"></i>
+                            <td class="d-flex align-items-center">
+                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
+                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
                             </td>
                         </tr>
 
@@ -157,9 +157,9 @@
                             <td>Il codice Da Vinci</td>
                             <td class="d-none d-md-table-cell">-</td>
                             <td><span class="bg-danger text-white p-1 rounded">Non disponibile</span></td>
-                            <td>
-                                <i class="fa-solid fa-pencil fs-4 text-secondary p-1 border border-secondary rounded"></i>
-                                <i class="fa-solid fa-trash fs-4 text-secondary p-1 border border-secondary rounded"></i>
+                            <td class="d-flex align-items-center">
+                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
+                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
                             </td>
                         </tr>
 
@@ -167,9 +167,9 @@
                             <td>Shining</td>
                             <td class="d-none d-md-table-cell">-</td>
                             <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
-                            <td>
-                                <i class="fa-solid fa-pencil fs-4 text-secondary p-1 border border-secondary rounded"></i>
-                                <i class="fa-solid fa-trash fs-4 text-secondary p-1 border border-secondary rounded"></i>
+                            <td class="d-flex align-items-center">
+                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
+                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
                             </td>
                         </tr>
 
@@ -177,9 +177,9 @@
                             <td>La divina commedia</td>
                             <td class="d-none d-md-table-cell">21/09/2023</td>
                             <td><span class="bg-warning text-white p-1 rounded">In prestito</span></td>
-                            <td>
-                                <i class="fa-solid fa-pencil fs-4 text-secondary p-1 border border-secondary rounded"></i>
-                                <i class="fa-solid fa-trash fs-4 text-secondary p-1 border border-secondary rounded"></i>
+                            <td class="d-flex align-items-center">
+                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
+                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
                             </td>
                         </tr>
 
@@ -187,9 +187,9 @@
                             <td>Il trono di spade</td>
                             <td class="d-none d-md-table-cell">-</td>
                             <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
-                            <td>
-                                <i class="fa-solid fa-pencil fs-4 text-secondary p-1 border border-secondary rounded"></i>
-                                <i class="fa-solid fa-trash fs-4 text-secondary p-1 border border-secondary rounded"></i>
+                            <td class="d-flex align-items-center">
+                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
+                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
                             </td>
                         </tr>
 
@@ -197,9 +197,9 @@
                             <td>Il mondo di Sofia</td>
                             <td class="d-none d-md-table-cell">-</td>
                             <td><span class="bg-danger text-white p-1 rounded">Non disponibile</span></td>
-                            <td>
-                                <i class="fa-solid fa-pencil fs-4 text-secondary p-1 border border-secondary rounded"></i>
-                                <i class="fa-solid fa-trash fs-4 text-secondary p-1 border border-secondary rounded"></i>
+                            <td class="d-flex align-items-center">
+                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
+                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
                             </td>
                         </tr>
 
@@ -207,9 +207,9 @@
                             <td>Le cronache di Narnia: il leone, la strega e l'armadio</td>
                             <td class="d-none d-md-table-cell">25/07/2023</td>
                             <td><span class="bg-warning text-white p-1 rounded">In prestito</span></td>
-                            <td>
-                                <i class="fa-solid fa-pencil fs-4 text-secondary p-1 border border-secondary rounded"></i>
-                                <i class="fa-solid fa-trash fs-4 text-secondary p-1 border border-secondary rounded"></i>
+                            <td class="d-flex align-items-center">
+                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
+                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
                             </td>
                         </tr>
 
@@ -217,9 +217,9 @@
                             <td>Il piccolo principe</td>
                             <td class="d-none d-md-table-cell">-</td>
                             <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
-                            <td>
-                                <i class="fa-solid fa-pencil fs-4 text-secondary p-1 border border-secondary rounded"></i>
-                                <i class="fa-solid fa-trash fs-4 text-secondary p-1 border border-secondary rounded"></i>
+                            <td class="d-flex align-items-center">
+                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
+                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
                             </td>
                         </tr>
 
@@ -227,9 +227,9 @@
                             <td>La storia infinita</td>
                             <td class="d-none d-md-table-cell">-</td>
                             <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
-                            <td>
-                                <i class="fa-solid fa-pencil fs-4 text-secondary p-1 border border-secondary rounded"></i>
-                                <i class="fa-solid fa-trash fs-4 text-secondary p-1 border border-secondary rounded"></i>
+                            <td class="d-flex align-items-center">
+                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
+                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
                             </td>
                         </tr>
 
