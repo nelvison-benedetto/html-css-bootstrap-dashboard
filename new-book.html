@@ -19,13 +19,11 @@
         <style>#debug *{border: 1px dashed black;}</style>
     </head>
 
-    <body id="debug">
+    <body id="">
         <header>
-            <nav
-                class="navbar navbar-expand-lg navbar-dark bg-dark"
-            >
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid ">
-                    <a class="navbar-brand p-0 d-flex justify-content-center align-items-center" href="index.html">
+                    <a class="navbar-brand d-flex justify-content-center align-items-center" href="index.html">
                         <img src="./assets/img/duck.png" alt="duck" class="img-fluid" width="50">
                     </a>
                     <button
@@ -40,12 +38,11 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="collapsibleNavId">
-                        <ul class="navbar-nav me-auto mt-2 mt-lg-0 ">
+                        <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" href="index.html" aria-current="page"
-                                    >Catalogo Libri
-                                    <span class="visually-hidden">(current)</span></a
-                                >
+                                <a class="nav-link active" href="index.html" aria-current="page">Catalogo Libri
+                                    <span class="visually-hidden">(current)</span>  <!--only useful x screenreaders!-->
+                                </a>
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="#">Anagrafica Utenti</a>
@@ -75,57 +72,113 @@
             </nav>
         </header>
         <main>
-
-            <div class="container">
-                <div class="row">
-                    
+            <div class="container my-4">
+                <h2 class="mb-3">Nuovo Libro</h2>
+                <div class="row ">
                     <div class="col-6 mb-3">
-                        <label for="" class="form-label">Nome Autore</label>
+                        <label for="author_name" class="form-label">Nome Autore</label>
                         <input
                             type="text"
                             class="form-control"
-                            name=""
-                            id=""
-                            aria-describedby="helpId"
+                            name="author_name"
+                            id="author_name"
+                            aria-describedby="smalltagName"
                             placeholder="Inserisci il nome dell'autore"
                         />
-                        <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
                     </div>
-                    
                     <div class="col-6 mb-3">
-                        <label for="" class="form-label">Cognome Autore</label>
+                        <label for="author_surname" class="form-label">Cognome Autore</label>
                         <input
                             type="text"
                             class="form-control"
-                            name=""
-                            id=""
-                            aria-describedby="helpId"
+                            name="author_surname"
+                            id="author_surname"
+                            aria-describedby="smalltagSurname"
                             placeholder="Inserisci il cognome dell'autore"
                         />
-                        <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
                     </div>
-
                 </div>
+
                 <div class="row">
-                    <div class="col-12 mb-3"></div>
-                        <label for="" class="form-label">Titolo</label>
+                    <div class="col-12 mb-3">
+                        <label for="title" class="form-label">Titolo</label>
                         <input
                             type="text"
                             class="form-control"
-                            name=""
-                            id=""
-                            aria-describedby="helpId"
+                            name="title"
+                            id="title"
+                            aria-describedby="smalltagTitle"
                             placeholder="Inserisci il titolo del libro"
                         />
-                        <small id="helpId" class="form-text text-muted">Titolo versione italiana</small>
+                        <small id="smalltagTitle" class="form-text text-muted">Titolo versione italiana</small>
                     </div>
                 </div>
+
                 <div class="row">
-                    
+                    <div class="col-12 col-md-4 mb-3">
+                        <label for="dropdownMenu" class="form-label">Genere</label>
+                        <select class="form-select" id="genre" name="dropdownMenu" aria-label="screen readers this is genre">
+                          <option selected>Scegli il genere</option>
+                          <option value="1">Action</option>
+                          <option value="2">Comedy</option>
+                          <option value="3">Thriller</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-4 mb-3">
+                        <label for="year" class="form-label">Anno di pubblicazione</label>
+                        <input 
+                            type="text"
+                            class="form-control"
+                            name="year"
+                            id="year"
+                            aria-describedby="smalltagYear"
+                            placeholder="Inserisci l'anno"
+                        />
+                    </div>
+                    <div class="col-12 col-md-4 mb-3">
+                        <label for="isbn" class="form-label">ISBN</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="isbn"
+                            id="isbn"
+                            aria-describedby="smalltagIsbn"
+                            placeholder="Inserisci il codice ISBN"
+                        />
+                    </div>
                 </div>
 
-            </div>
+                <hr>
 
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <label for="note">Note</label>
+                        <textarea
+                            class="form-control"
+                            rows="5"
+                            name="note"
+                            id="note"
+                            aria-describedby="smalltagNote"
+                            placeholder="Inserisci eventuali note sul libro"
+                        ></textarea>
+                    </div>
+                </div>
+
+                <div class="form-check mb-3">
+                    <input
+                        type="checkbox"
+                        name="isdigital"
+                        id="isdigital"
+                        value="1"
+                        style="margin-left: -1.3rem;"
+                    />
+                    <label class="form-check-label" for="isdigital">Disponibile anche in digitale</label>
+                </div>
+                <button
+                    type="submit"
+                    class=" btn btn-primary" 
+                >Aggiungi libro</button>
+            </div>
 
         </main>
         <footer>

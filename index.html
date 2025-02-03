@@ -20,32 +20,31 @@
 
 
     <body id="">
-        <header>
-            <nav
-                class="navbar navbar-expand-lg navbar-dark bg-dark"
-            >
-                <div class="container-fluid ">
-                    <a class="navbar-brand p-0 d-flex justify-content-center align-items-center" href="#">
-                        <img src="./assets/img/duck.png" alt="duck" class="img-fluid" width="50">
+        <header class="mb-3">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">  
+                <!--navbar-expand-lg SIGNIFICA CHE NAVBAR COLLASSA SE E' MINORE LG!!-->
+                <div class="container-fluid ">    <!--container 100%-->
+                    <a class="navbar-brand d-flex justify-content-center align-items-center" href="#"> <!-- navbar-brand x logos-->
+                        <img src="./assets/img/duck.png" alt="duck" class="img-fluid" width="50">  <!-- img fluid che si adatta a schermo width, img 50px-->
                     </a>
                     <button
-                        class="navbar-toggler d-lg-none"
+                        class="navbar-toggler d-lg-none"  
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#collapsibleNavId"
                         aria-controls="collapsibleNavId"
                         aria-expanded="false"
                         aria-label="Toggle navigation"
-                    >
-                        <span class="navbar-toggler-icon"></span>
+                    > <!--navbartoggler x show button open/close, non mostra su schermi lg -->
+                      <!--databs e ariacontrols link to the item target to execute-->
+                      <!--aria-controls x gli screenreaders-->
+                        <span class="navbar-toggler-icon"></span>  <!--icon as 'hamburger'-->
                     </button>
-                    <div class="collapse navbar-collapse" id="collapsibleNavId">
-                        <ul class="navbar-nav me-auto mt-2 mt-lg-0 ">
+                    <div class="collapse navbar-collapse" id="collapsibleNavId">  <!--dice che puo collassare su schermi sm-->
+                        <ul class="navbar-nav me-auto">  <!--margine-end (as flex-end)-->
                             <li class="nav-item">
-                                <a class="nav-link active" href="#" aria-current="page"
-                                    >Catalogo Libri
-                                    <span class="visually-hidden">(current)</span></a
-                                >
+                                <a class="nav-link active" href="#" aria-current="page">Catalogo Libri</a>
+                                <span class="visually-hidden">(current)</span>  <!--only useful x screenreaders!-->
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="#">Anagrafica Utenti</a>
@@ -56,37 +55,15 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Help</a>
                             </li>
-                            <!-- <li class="nav-item dropdown">
-                                <a
-                                    class="nav-link dropdown-toggle"
-                                    href="#"
-                                    id="dropdownId"
-                                    data-bs-toggle="dropdown"
-                                    aria-haspopup="true"
-                                    aria-expanded="false"
-                                    >Dropdown</a
-                                >
-                                <div
-                                    class="dropdown-menu"
-                                    aria-labelledby="dropdownId"
-                                >
-                                    <a class="dropdown-item" href="#"
-                                        >Action 1</a
-                                    >
-                                    <a class="dropdown-item" href="#"
-                                        >Action 2</a
-                                    >
-                                </div>
-                            </li> -->
                         </ul>
-                        <form class="d-flex my-2 my-lg-0">
+                        <form class="d-flex my-0 my-lg-0">
                             <input
                                 class="form-control me-sm-2"
                                 type="text"
                                 placeholder="Cerca"
                             />
                             <button
-                                class="btn btn-outline-light my-2 my-sm-0 border-light"
+                                class="btn btn-outline-light my-sm-0 border-light"
                                 type="submit"
                             >
                                 Search
@@ -94,157 +71,181 @@
                         </form>
                     </div>
                 </div>
-            </nav>
-            
+            </nav>  
         </header>
 
         <main class="">
-
-            <div class="container-fluid container-lg table-responsive px-md-5 ">
-
-                <div class="d-flex align-items-center justify-content-between align-middle mt-4 mb-2">
-                    <h4 class="my-0">Catalogo Libri</h4>
-                    <a href="new-book.html" class="btn btn-primary">Aggiungi Libro</a>
+            <div class="container-fluid table-responsive px-md-5">
+                <!--tableresponsive solo x tabels scrolling-->
+                <div class="row">
+                    <div class="col-12 col-lg-9">
+                        <div class="d-flex align-items-center justify-content-between align-middle mb-3">
+                            <h4>Catalogo Libri</h4>
+                            <a href="new-book.html" class="btn btn-primary">Aggiungi Libro</a>
+                        </div>
+                        <table class="table table-striped mb-3">
+                            <thead class="thead-dark align-middle">
+                                <tr>
+                                <th>Titolo</th>
+                                <th class="d-none d-md-table-cell">Data Prestito</th>
+                                <th>Stato</th>
+                                <th>Azioni</th>
+                                </tr>
+                            </thead>
+                            <tbody>  <!-- //icons rows "Non disponibile" impossible allign y center in 768-803px range -->
+                                <tr class="align-middle">
+                                    <td>I pilastri della terra</td>
+                                    <td class="d-none d-md-table-cell">-</td>
+                                    <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
+                                    <td class="d-flex align-items-center">
+                                        <i class="fa-solid fa-pencil fs-6 text-secondary p-2 border border-secondary rounded me-1"></i>  <!-- //the line breaks 800px+ if not fs-6 -->
+                                        <i class="fa-solid fa-trash fs-6 text-secondary p-2 border border-secondary rounded"></i>
+                                    </td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td>I promessi sposi</td>
+                                    <td class="d-none d-md-table-cell">-</td>
+                                    <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
+                                    <td class="d-flex align-items-center">
+                                        <i class="fa-solid fa-pencil fs-6 text-secondary p-2 border border-secondary rounded me-1"></i>
+                                        <i class="fa-solid fa-trash fs-6 text-secondary p-2 border border-secondary rounded"></i>
+                                    </td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td>Il signore degli anelli</td>
+                                    <td class="d-none d-md-table-cell">18/10/2023</td>
+                                    <td><span class="bg-warning text-white p-1 rounded">In prestito</span></td>
+                                    <td class="d-flex align-items-center">
+                                        <i class="fa-solid fa-pencil fs-6 text-secondary p-2 border border-secondary rounded me-1"></i>
+                                        <i class="fa-solid fa-trash fs-6 text-secondary p-2 border border-secondary rounded"></i>
+                                    </td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td>Harry Potter e la pietra filosofale</td>
+                                    <td class="d-none d-md-table-cell">-</td>
+                                    <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
+                                    <td class="d-flex align-items-center">
+                                        <i class="fa-solid fa-pencil fs-6 text-secondary p-2 border border-secondary rounded me-1"></i>
+                                        <i class="fa-solid fa-trash fs-6 text-secondary p-2 border border-secondary rounded"></i>
+                                    </td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td>Il codice Da Vinci</td>
+                                    <td class="d-none d-md-table-cell">-</td>
+                                    <td><span class="bg-danger text-white p-1 rounded">Non disponibile</span></td>
+                                    <td class="d-flex align-items-center">
+                                        <i class="fa-solid fa-pencil fs-6 text-secondary p-2 border border-secondary rounded me-1"></i>
+                                        <i class="fa-solid fa-trash fs-6 text-secondary p-2 border border-secondary rounded"></i>
+                                    </td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td>Shining</td>
+                                    <td class="d-none d-md-table-cell">-</td>
+                                    <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
+                                    <td class="d-flex align-items-center">
+                                        <i class="fa-solid fa-pencil fs-6 text-secondary p-2 border border-secondary rounded me-1"></i>
+                                        <i class="fa-solid fa-trash fs-6 text-secondary p-2 border border-secondary rounded"></i>
+                                    </td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td>La divina commedia</td>
+                                    <td class="d-none d-md-table-cell">21/09/2023</td>
+                                    <td><span class="bg-warning text-white p-1 rounded">In prestito</span></td>
+                                    <td class="d-flex align-items-center">
+                                        <i class="fa-solid fa-pencil fs-6 text-secondary p-2 border border-secondary rounded me-1"></i>
+                                        <i class="fa-solid fa-trash fs-6 text-secondary p-2 border border-secondary rounded"></i>
+                                    </td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td>Il trono di spade</td>
+                                    <td class="d-none d-md-table-cell">-</td>
+                                    <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
+                                    <td class="d-flex align-items-center">
+                                        <i class="fa-solid fa-pencil fs-6 text-secondary p-2 border border-secondary rounded me-1"></i>
+                                        <i class="fa-solid fa-trash fs-6 text-secondary p-2 border border-secondary rounded"></i>
+                                    </td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td>Il mondo di Sofia</td>
+                                    <td class="d-none d-md-table-cell">-</td>
+                                    <td><span class="bg-danger text-white p-1 rounded">Non disponibile</span></td>
+                                    <td class="d-flex align-items-center">
+                                        <i class="fa-solid fa-pencil fs-6 text-secondary p-2 border border-secondary rounded me-1"></i>
+                                        <i class="fa-solid fa-trash fs-6 text-secondary p-2 border border-secondary rounded"></i>
+                                    </td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td>Le cronache di Narnia: il leone, la strega e l'armadio</td>
+                                    <td class="d-none d-md-table-cell">25/07/2023</td>
+                                    <td><span class="bg-warning text-white p-1 rounded">In prestito</span></td>
+                                    <td class="d-flex align-items-center">
+                                        <i class="fa-solid fa-pencil fs-6 text-secondary p-2 border border-secondary rounded me-1"></i>
+                                        <i class="fa-solid fa-trash fs-6 text-secondary p-2 border border-secondary rounded"></i>
+                                    </td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td>Il piccolo principe</td>
+                                    <td class="d-none d-md-table-cell">-</td>
+                                    <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
+                                    <td class="d-flex align-items-center">
+                                        <i class="fa-solid fa-pencil fs-6 text-secondary p-2 border border-secondary rounded me-1"></i>
+                                        <i class="fa-solid fa-trash fs-6 text-secondary p-2 border border-secondary rounded"></i>
+                                    </td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td>La storia infinita</td>
+                                    <td class="d-none d-md-table-cell">-</td>
+                                    <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
+                                    <td class="d-flex align-items-center">
+                                        <i class="fa-solid fa-pencil fs-6 text-secondary p-2 border border-secondary rounded me-1"></i>
+                                        <i class="fa-solid fa-trash fs-6 text-secondary p-2 border border-secondary rounded"></i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="card mb-3">
+                            <div class="card-header">Todo</div>
+                            <div class="card-body">
+                                <ul class="list-group rounded border">
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <input class="form-check-input me-2" type="checkbox" id="todo1">
+                                        <label class="form-check-label" for="todo1">
+                                            Chiamare segreteria
+                                        </label>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <input class="form-check-input me-2" type="checkbox" id="todo2">
+                                        <label class="form-check-label" for="todo2">
+                                            Mandare avvisi prestiti scaduti
+                                        </label>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <input class="form-check-input me-2" type="checkbox" id="todo3">
+                                        <label class="form-check-label" for="todo3">
+                                            Ordina nuovi libri
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card mb-3">
+                            <div class="card-header">F.A.Q.</div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Come aggiungere un nuovo libro?</li>
+                                    <li class="list-group-item">Come posso accedere all'anagrafica utenti?</li>
+                                    <li class="list-group-item">Posso usare questa dashboard da mobile?</li>
+                                  </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <table class="table table-striped mb-0">
-                    
-                    <thead class="thead-dark align-middle">
-                        <tr>
-                        <th>Titolo</th>
-                        <th class="d-none d-md-table-cell">Data Prestito</th>
-                        <th>Stato</th>
-                        <th>Azioni</th>
-                        </tr>
-                    </thead>
-                    <tbody>  <!-- //icons rows "Non disponibile" impossible allign y center in 768-803px range -->
-
-                        <tr class="align-middle">
-                            <td>I pilastri della terra</td>
-                            <td class="d-none d-md-table-cell">-</td>
-                            <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
-                            <td class="d-flex align-items-center">
-                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>  <!-- //the line breaks 800px+ if not fs-6 -->
-                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
-                            </td>
-                        </tr>
-                    
-                        <tr class="align-middle">
-                            <td>I promessi sposi</td>
-                            <td class="d-none d-md-table-cell">-</td>
-                            <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
-                            <td class="d-flex align-items-center">
-                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
-                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
-                            </td>
-                        </tr>
-
-                        <tr class="align-middle">
-                            <td>Il signore degli anelli</td>
-                            <td class="d-none d-md-table-cell">18/10/2023</td>
-                            <td><span class="bg-warning text-white p-1 rounded">In prestito</span></td>
-                            <td class="d-flex align-items-center">
-                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
-                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
-                            </td>
-                        </tr>
-
-                        <tr class="align-middle">
-                            <td>Harry Potter e la pietra filosofale</td>
-                            <td class="d-none d-md-table-cell">-</td>
-                            <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
-                            <td class="d-flex align-items-center">
-                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
-                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
-                            </td>
-                        </tr>
-
-                        <tr class="align-middle">
-                            <td>Il codice Da Vinci</td>
-                            <td class="d-none d-md-table-cell">-</td>
-                            <td><span class="bg-danger text-white p-1 rounded">Non disponibile</span></td>
-                            <td class="d-flex align-items-center">
-                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
-                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
-                            </td>
-                        </tr>
-
-                        <tr class="align-middle">
-                            <td>Shining</td>
-                            <td class="d-none d-md-table-cell">-</td>
-                            <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
-                            <td class="d-flex align-items-center">
-                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
-                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
-                            </td>
-                        </tr>
-
-                        <tr class="align-middle">
-                            <td>La divina commedia</td>
-                            <td class="d-none d-md-table-cell">21/09/2023</td>
-                            <td><span class="bg-warning text-white p-1 rounded">In prestito</span></td>
-                            <td class="d-flex align-items-center">
-                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
-                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
-                            </td>
-                        </tr>
-
-                        <tr class="align-middle">
-                            <td>Il trono di spade</td>
-                            <td class="d-none d-md-table-cell">-</td>
-                            <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
-                            <td class="d-flex align-items-center">
-                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
-                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
-                            </td>
-                        </tr>
-
-                        <tr class="align-middle">
-                            <td>Il mondo di Sofia</td>
-                            <td class="d-none d-md-table-cell">-</td>
-                            <td><span class="bg-danger text-white p-1 rounded">Non disponibile</span></td>
-                            <td class="d-flex align-items-center">
-                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
-                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
-                            </td>
-                        </tr>
-
-                        <tr class="align-middle">
-                            <td>Le cronache di Narnia: il leone, la strega e l'armadio</td>
-                            <td class="d-none d-md-table-cell">25/07/2023</td>
-                            <td><span class="bg-warning text-white p-1 rounded">In prestito</span></td>
-                            <td class="d-flex align-items-center">
-                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
-                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
-                            </td>
-                        </tr>
-
-                        <tr class="align-middle">
-                            <td>Il piccolo principe</td>
-                            <td class="d-none d-md-table-cell">-</td>
-                            <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
-                            <td class="d-flex align-items-center">
-                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
-                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
-                            </td>
-                        </tr>
-
-                        <tr class="align-middle">
-                            <td>La storia infinita</td>
-                            <td class="d-none d-md-table-cell">-</td>
-                            <td><span class="bg-success text-white p-1 rounded">Disponibile</span></td>
-                            <td class="d-flex align-items-center">
-                                <i class="fa-solid fa-pencil fs-6 text-secondary p-1 border border-secondary rounded me-1"></i>
-                                <i class="fa-solid fa-trash fs-6 text-secondary p-1 border border-secondary rounded"></i>
-                            </td>
-                        </tr>
 
 
-
-                    </tbody>
-                </table>
-
-
+                
 
                 
 
